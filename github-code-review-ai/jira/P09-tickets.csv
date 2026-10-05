@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P09-01,Initialize AI Pull Request Review and Quality Assistant repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: GitHub webhook → signature verification → diff/context fetch → static checks → LLM review with repository rules → finding deduplication and severity policy → draft PR comments/check run.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-03,Create core database schema and migration workflow,"Model and migrate the core entities: Repository, Installation, PullRequest, ReviewRun, Finding, RuleSet, Comment, WebhookEvent. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /webhooks/github; POST /repositories/{id}/review-rules; GET /reviews/{id}; POST /reviews/{id}/publish; GET /health. Include validation, pagination where needed, request IDs, and consistent error responses.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-06,GitHub App installation flow,Implement and test the first core capability: GitHub App installation flow.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-07,Webhook signature verification,Implement and test the next core capability: Webhook signature verification.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-08,Idempotent event processing,Implement and test the next core capability: Idempotent event processing.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-09,Pull request diff retrieval,Implement and test the next core capability: Pull request diff retrieval.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-10,Relevant code context collection,Implement and test the next core capability: Relevant code context collection.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P09-11,Repository rule configuration,Implement and test the next core capability: Repository rule configuration.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-12,Static analysis integration,Implement and test the next core capability: Static analysis integration.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-13,LLM review orchestration,Implement and test the next core capability: LLM review orchestration.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-14,Finding schema and severity,Implement and test the next core capability: Finding schema and severity.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-15,Finding deduplication,Implement and test the next core capability: Finding deduplication.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Finding precision, actionable rate, missed seeded defects, duplicate comments, review latency. Include per-case results and regression comparison.",High,github-code-review-ai,P09-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Finding precision, actionable rate, missed seeded defects, duplicate comments, review latency.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P09-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Prompt injection in code/comments, false positives, secret leakage, webhook replay, excessive permissions. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,github-code-review-ai,P09-EPIC,"1. Controls address Prompt injection in code/comments, false positives, secret leakage, webhook replay, excessive permissions.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P09-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P09-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

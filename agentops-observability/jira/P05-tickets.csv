@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P05-01,Initialize AI Agent Monitoring and Reliability Platform repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Instrumented agents/SDK → ingestion collector → normalized trace/event store → aggregation workers → alert rules → dashboard and export APIs.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-03,Create core database schema and migration workflow,"Model and migrate the core entities: Project, Agent, Trace, Span, ToolEvent, ModelCall, MetricPoint, AlertRule, AlertEvent, Evaluation. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /v1/events; GET /traces; GET /traces/{id}; GET /metrics; CRUD /alert-rules; GET /alerts. Include validation, pagination where needed, request IDs, and consistent error responses.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-06,Project and API key management,Implement and test the first core capability: Project and API key management.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-07,Agent instrumentation SDK,Implement and test the next core capability: Agent instrumentation SDK.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-08,OpenTelemetry-compatible event schema,Implement and test the next core capability: OpenTelemetry-compatible event schema.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-09,Trace and span ingestion,Implement and test the next core capability: Trace and span ingestion.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-10,Model-call and tool-call tracking,Implement and test the next core capability: Model-call and tool-call tracking.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P05-11,Token and cost estimation,Implement and test the next core capability: Token and cost estimation.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-12,Latency and error metrics,Implement and test the next core capability: Latency and error metrics.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-13,Trace search and filtering,Implement and test the next core capability: Trace search and filtering.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-14,Trace detail timeline,Implement and test the next core capability: Trace detail timeline.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-15,Dashboard widgets,Implement and test the next core capability: Dashboard widgets.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Event loss rate, ingestion throughput, query latency, metric correctness, alert precision, retention compliance. Include per-case results and regression comparison.",High,agentops-observability,P05-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Event loss rate, ingestion throughput, query latency, metric correctness, alert precision, retention compliance.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P05-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: High-cardinality telemetry, sensitive prompt capture, ingestion overload, misleading aggregates, storage growth. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,agentops-observability,P05-EPIC,"1. Controls address High-cardinality telemetry, sensitive prompt capture, ingestion overload, misleading aggregates, storage growth.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P05-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P05-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

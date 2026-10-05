@@ -1,0 +1,801 @@
+Project ID,Project,Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-01,Initialize Enterprise Knowledge Intelligence Platform repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Upload API → ingestion queue → parser/chunker → embedding service → pgvector index. Query API → hybrid retrieval → reranker → grounded LLM response with citations → evaluation and feedback pipeline.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-03,Create core database schema and migration workflow,"Model and migrate the core entities: Workspace, Document, DocumentVersion, Chunk, Embedding, Query, RetrievedPassage, Answer, Citation, EvaluationRun, Feedback. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /documents; GET /documents/{id}; POST /search; POST /answers; POST /evaluations; POST /feedback; GET /health. Include validation, pagination where needed, request IDs, and consistent error responses.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-06,Workspace and document lifecycle,Implement and test the first core capability: Workspace and document lifecycle.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-07,Secure document upload and validation,Implement and test the next core capability: Secure document upload and validation.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-08,PDF/DOCX/text parsing,Implement and test the next core capability: PDF/DOCX/text parsing.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-09,Configurable chunking strategies,Implement and test the next core capability: Configurable chunking strategies.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-10,Embedding generation and versioning,Implement and test the next core capability: Embedding generation and versioning.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-11,Vector index management,Implement and test the next core capability: Vector index management.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-12,Hybrid keyword and semantic retrieval,Implement and test the next core capability: Hybrid keyword and semantic retrieval.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-13,Metadata filtering and access control,Implement and test the next core capability: Metadata filtering and access control.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-14,Reranking pipeline,Implement and test the next core capability: Reranking pipeline.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-15,Grounded answer generation,Implement and test the next core capability: Grounded answer generation.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Recall@k, MRR, answer relevance, faithfulness, citation precision, latency, cost per query. Include per-case results and regression comparison.",High,rag-evaluation-platform,P01-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Recall@k, MRR, answer relevance, faithfulness, citation precision, latency, cost per query.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Poor chunking, stale indexes, hallucinated citations, tenant data leakage, embedding/model cost. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,rag-evaluation-platform,P01-EPIC,"1. Controls address Poor chunking, stale indexes, hallucinated citations, tenant data leakage, embedding/model cost.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P01,Enterprise Knowledge Intelligence Platform,Story,P01-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-01,Initialize Autonomous Market Research Analyst repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Research request → planner → bounded search/retrieval tools → evidence store → synthesis agent → citation verifier → human review → report export. Persist graph state and tool traces.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-03,Create core database schema and migration workflow,"Model and migrate the core entities: ResearchJob, PlanStep, Source, Evidence, ToolCall, Finding, Report, ReviewDecision. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /research-jobs; GET /research-jobs/{id}; POST /research-jobs/{id}/approve; GET /reports/{id}; POST /tools/search. Include validation, pagination where needed, request IDs, and consistent error responses.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-06,Research workspace and job creation,Implement and test the first core capability: Research workspace and job creation.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-07,Goal decomposition and planning,Implement and test the next core capability: Goal decomposition and planning.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-08,Search provider abstraction,Implement and test the next core capability: Search provider abstraction.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-09,Safe web retrieval and content normalization,Implement and test the next core capability: Safe web retrieval and content normalization.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-10,Evidence ledger with source metadata,Implement and test the next core capability: Evidence ledger with source metadata.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P02,Autonomous Market Research Analyst,Story,P02-11,Duplicate source detection,Implement and test the next core capability: Duplicate source detection.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-12,Research graph orchestration,Implement and test the next core capability: Research graph orchestration.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-13,Tool-call budgets and loop limits,Implement and test the next core capability: Tool-call budgets and loop limits.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-14,Finding extraction and claim tracking,Implement and test the next core capability: Finding extraction and claim tracking.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-15,Citation verification,Implement and test the next core capability: Citation verification.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Source coverage, claim-to-source support, citation validity, task completion, tool efficiency, human review acceptance. Include per-case results and regression comparison.",High,autonomous-research-agent,P02-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Source coverage, claim-to-source support, citation validity, task completion, tool efficiency, human review acceptance.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P02,Autonomous Market Research Analyst,Story,P02-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Untrusted web content, fabricated citations, runaway tool loops, source duplication, excessive cost. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,autonomous-research-agent,P02-EPIC,"1. Controls address Untrusted web content, fabricated citations, runaway tool loops, source duplication, excessive cost.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P02,Autonomous Market Research Analyst,Story,P02-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P02,Autonomous Market Research Analyst,Story,P02-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-01,Initialize Smart Customer Service Assistant repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Conversation gateway → intent and sentiment signals → customer/ticket context → knowledge retrieval → response draft → policy checks → agent approval/send. Ticket events feed analytics.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-03,Create core database schema and migration workflow,"Model and migrate the core entities: Customer, Conversation, Message, Ticket, Intent, SuggestedReply, KnowledgeArticle, Escalation, Feedback. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /conversations; POST /messages; GET /tickets/{id}; POST /tickets/{id}/classify; POST /replies/{id}/approve; GET /analytics. Include validation, pagination where needed, request IDs, and consistent error responses.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-06,Agent workspace and inbox,Implement and test the first core capability: Agent workspace and inbox.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-07,Conversation and ticket data model,Implement and test the next core capability: Conversation and ticket data model.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-08,Message ingestion API,Implement and test the next core capability: Message ingestion API.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-09,Intent and priority classification,Implement and test the next core capability: Intent and priority classification.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-10,Customer context retrieval,Implement and test the next core capability: Customer context retrieval.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P03,Smart Customer Service Assistant,Story,P03-11,Knowledge-base ingestion,Implement and test the next core capability: Knowledge-base ingestion.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-12,Grounded response drafting,Implement and test the next core capability: Grounded response drafting.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-13,Policy and safety checks,Implement and test the next core capability: Policy and safety checks.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-14,Human approval workflow,Implement and test the next core capability: Human approval workflow.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-15,Escalation rules,Implement and test the next core capability: Escalation rules.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Resolution suggestion acceptance, classification F1, groundedness, escalation recall, response latency, agent satisfaction. Include per-case results and regression comparison.",High,customer-support-copilot,P03-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Resolution suggestion acceptance, classification F1, groundedness, escalation recall, response latency, agent satisfaction.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P03,Smart Customer Service Assistant,Story,P03-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Incorrect advice, privacy exposure, over-automation, stale policies, biased sentiment classification. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,customer-support-copilot,P03-EPIC,"1. Controls address Incorrect advice, privacy exposure, over-automation, stale policies, biased sentiment classification.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P03,Smart Customer Service Assistant,Story,P03-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P03,Smart Customer Service Assistant,Story,P03-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-01,Initialize Voice-Based Appointment and Task Assistant repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Audio capture → speech recognition → dialogue manager → intent/entity extraction → tool permission check → calendar/task adapter → spoken confirmation. Stream partial transcripts and handle interruption.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-03,Create core database schema and migration workflow,"Model and migrate the core entities: User, Session, Utterance, Intent, Task, Appointment, ToolAction, ConsentRecord. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /sessions; POST /sessions/{id}/audio; POST /sessions/{id}/turns; GET /tasks; POST /appointments; DELETE /sessions/{id}. Include validation, pagination where needed, request IDs, and consistent error responses.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-06,Voice session lifecycle,Implement and test the first core capability: Voice session lifecycle.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-07,Microphone permission and capture UI,Implement and test the next core capability: Microphone permission and capture UI.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-08,Speech recognition adapter,Implement and test the next core capability: Speech recognition adapter.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-09,Transcript normalization,Implement and test the next core capability: Transcript normalization.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-10,Intent and entity extraction,Implement and test the next core capability: Intent and entity extraction.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-11,Dialogue state management,Implement and test the next core capability: Dialogue state management.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-12,Task and calendar integrations,Implement and test the next core capability: Task and calendar integrations.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-13,Permission and confirmation gates,Implement and test the next core capability: Permission and confirmation gates.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-14,Text-to-speech response,Implement and test the next core capability: Text-to-speech response.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-15,Streaming and partial results,Implement and test the next core capability: Streaming and partial results.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Word error rate, intent accuracy, task completion, confirmation compliance, end-to-end latency, interruption recovery. Include per-case results and regression comparison.",High,voice-task-assistant,P04-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Word error rate, intent accuracy, task completion, confirmation compliance, end-to-end latency, interruption recovery.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Misrecognition, accidental booking/deletion, latency, sensitive audio retention, noisy environments. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,voice-task-assistant,P04-EPIC,"1. Controls address Misrecognition, accidental booking/deletion, latency, sensitive audio retention, noisy environments.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P04,Voice-Based Appointment and Task Assistant,Story,P04-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P04,Voice-Based Appointment and Task Assistant,Story,P04-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-01,Initialize AI Agent Monitoring and Reliability Platform repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Instrumented agents/SDK → ingestion collector → normalized trace/event store → aggregation workers → alert rules → dashboard and export APIs.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-03,Create core database schema and migration workflow,"Model and migrate the core entities: Project, Agent, Trace, Span, ToolEvent, ModelCall, MetricPoint, AlertRule, AlertEvent, Evaluation. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /v1/events; GET /traces; GET /traces/{id}; GET /metrics; CRUD /alert-rules; GET /alerts. Include validation, pagination where needed, request IDs, and consistent error responses.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-06,Project and API key management,Implement and test the first core capability: Project and API key management.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-07,Agent instrumentation SDK,Implement and test the next core capability: Agent instrumentation SDK.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-08,OpenTelemetry-compatible event schema,Implement and test the next core capability: OpenTelemetry-compatible event schema.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-09,Trace and span ingestion,Implement and test the next core capability: Trace and span ingestion.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-10,Model-call and tool-call tracking,Implement and test the next core capability: Model-call and tool-call tracking.,High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-11,Token and cost estimation,Implement and test the next core capability: Token and cost estimation.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-12,Latency and error metrics,Implement and test the next core capability: Latency and error metrics.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-13,Trace search and filtering,Implement and test the next core capability: Trace search and filtering.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-14,Trace detail timeline,Implement and test the next core capability: Trace detail timeline.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-15,Dashboard widgets,Implement and test the next core capability: Dashboard widgets.,Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Event loss rate, ingestion throughput, query latency, metric correctness, alert precision, retention compliance. Include per-case results and regression comparison.",High,agentops-observability,P05-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Event loss rate, ingestion throughput, query latency, metric correctness, alert precision, retention compliance.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: High-cardinality telemetry, sensitive prompt capture, ingestion overload, misleading aggregates, storage growth. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,agentops-observability,P05-EPIC,"1. Controls address High-cardinality telemetry, sensitive prompt capture, ingestion overload, misleading aggregates, storage growth.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P05,AI Agent Monitoring and Reliability Platform,Story,P05-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,agentops-observability,P05-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-01,Initialize Intelligent Invoice and Contract Processing System repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Upload → malware/type validation → OCR/layout extraction → schema-based field extraction → deterministic validation → confidence routing → reviewer queue → export/integration.",High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-03,Create core database schema and migration workflow,"Model and migrate the core entities: Document, ExtractionJob, FieldResult, ValidationRule, ReviewTask, Correction, ExportBatch, AuditEvent. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /documents; POST /extraction-jobs; GET /jobs/{id}; GET /review-queue; PATCH /review-tasks/{id}; POST /exports. Include validation, pagination where needed, request IDs, and consistent error responses.",High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-06,Document upload and type detection,Implement and test the first core capability: Document upload and type detection.,High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-07,Secure object storage,Implement and test the next core capability: Secure object storage.,High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-08,OCR provider adapter,Implement and test the next core capability: OCR provider adapter.,High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-09,Layout and table extraction,Implement and test the next core capability: Layout and table extraction.,Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-10,Invoice schema,Implement and test the next core capability: Invoice schema.,High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-11,Contract clause/field schema,Implement and test the next core capability: Contract clause/field schema.,Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-12,Structured LLM extraction,Implement and test the next core capability: Structured LLM extraction.,Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-13,JSON schema validation,Implement and test the next core capability: JSON schema validation.,Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-14,Business-rule validation,Implement and test the next core capability: Business-rule validation.,Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-15,Field confidence scoring,Implement and test the next core capability: Field confidence scoring.,Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Field-level precision/recall, exact match, reviewer correction rate, processing time, exception rate. Include per-case results and regression comparison.",High,document-extraction-pipeline,P06-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Field-level precision/recall, exact match, reviewer correction rate, processing time, exception rate.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: OCR errors, hallucinated fields, inconsistent schemas, malicious files, low-confidence automation. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,document-extraction-pipeline,P06-EPIC,"1. Controls address OCR errors, hallucinated fields, inconsistent schemas, malicious files, low-confidence automation.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P06,Intelligent Invoice and Contract Processing System,Story,P06-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P06,Intelligent Invoice and Contract Processing System,Story,P06-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,document-extraction-pipeline,P06-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-01,Initialize AI Software Project Delivery Orchestrator repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Project brief → requirements agent → planner → task/dependency graph → specialist agents → tool execution sandbox/adapters → reviewer and human approval → Jira synchronization.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-03,Create core database schema and migration workflow,"Model and migrate the core entities: Project, Requirement, Plan, Task, Dependency, AgentRun, Artifact, Approval, JiraLink. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /projects; POST /projects/{id}/plans; GET /plans/{id}; POST /tasks/{id}/run; POST /approvals/{id}; POST /integrations/jira/sync. Include validation, pagination where needed, request IDs, and consistent error responses.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-06,Project intake and brief parser,Implement and test the first core capability: Project intake and brief parser.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-07,Requirement extraction,Implement and test the next core capability: Requirement extraction.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-08,Work breakdown planner,Implement and test the next core capability: Work breakdown planner.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-09,Dependency graph validation,Implement and test the next core capability: Dependency graph validation.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-10,Specialist agent definitions,Implement and test the next core capability: Specialist agent definitions.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-11,Shared state and artifact store,Implement and test the next core capability: Shared state and artifact store.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-12,Task assignment and status model,Implement and test the next core capability: Task assignment and status model.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-13,Bounded agent execution,Implement and test the next core capability: Bounded agent execution.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-14,Tool permission scopes,Implement and test the next core capability: Tool permission scopes.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-15,Jira issue creation and sync,Implement and test the next core capability: Jira issue creation and sync.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Plan completeness, dependency validity, task success, duplicate rate, approval rejection rate, cost per workflow. Include per-case results and regression comparison.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Plan completeness, dependency validity, task success, duplicate rate, approval rejection rate, cost per workflow.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Agent coordination loops, unsafe repository changes, duplicate Jira issues, unclear ownership, unreviewed outputs. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Controls address Agent coordination loops, unsafe repository changes, duplicate Jira issues, unclear ownership, unreviewed outputs.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P07,AI Software Project Delivery Orchestrator,Story,P07-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P07,AI Software Project Delivery Orchestrator,Story,P07-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-01,Initialize Context-Aware Enterprise Search Engine repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Connectors → normalization and ACL mapping → lexical/vector indexing → query understanding → hybrid retrieval → reranking → explainable results and optional answer synthesis.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-03,Create core database schema and migration workflow,"Model and migrate the core entities: Connector, SourceRecord, IndexDocument, ACL, SearchQuery, SearchResult, RankingConfig, Feedback. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /connectors; POST /index/rebuild; POST /search; GET /documents/{id}; POST /feedback; GET /search/metrics. Include validation, pagination where needed, request IDs, and consistent error responses.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-06,Connector framework,Implement and test the first core capability: Connector framework.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-07,Source normalization,Implement and test the next core capability: Source normalization.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-08,Incremental indexing,Implement and test the next core capability: Incremental indexing.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-09,ACL ingestion and enforcement,Implement and test the next core capability: ACL ingestion and enforcement.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-10,Keyword search,Implement and test the next core capability: Keyword search.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-11,Embedding generation,Implement and test the next core capability: Embedding generation.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-12,Hybrid retrieval,Implement and test the next core capability: Hybrid retrieval.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-13,Query rewriting,Implement and test the next core capability: Query rewriting.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-14,Reranking configuration,Implement and test the next core capability: Reranking configuration.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-15,Result explanations,Implement and test the next core capability: Result explanations.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: NDCG@k, Recall@k, MRR, zero-result rate, ACL leakage tests, query latency. Include per-case results and regression comparison.",High,enterprise-semantic-search,P08-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include NDCG@k, Recall@k, MRR, zero-result rate, ACL leakage tests, query latency.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Permission leakage, stale indexes, ranking drift, connector failures, query privacy. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,enterprise-semantic-search,P08-EPIC,"1. Controls address Permission leakage, stale indexes, ranking drift, connector failures, query privacy.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P08,Context-Aware Enterprise Search Engine,Story,P08-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P08,Context-Aware Enterprise Search Engine,Story,P08-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-01,Initialize AI Pull Request Review and Quality Assistant repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: GitHub webhook → signature verification → diff/context fetch → static checks → LLM review with repository rules → finding deduplication and severity policy → draft PR comments/check run.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-03,Create core database schema and migration workflow,"Model and migrate the core entities: Repository, Installation, PullRequest, ReviewRun, Finding, RuleSet, Comment, WebhookEvent. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /webhooks/github; POST /repositories/{id}/review-rules; GET /reviews/{id}; POST /reviews/{id}/publish; GET /health. Include validation, pagination where needed, request IDs, and consistent error responses.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-06,GitHub App installation flow,Implement and test the first core capability: GitHub App installation flow.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-07,Webhook signature verification,Implement and test the next core capability: Webhook signature verification.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-08,Idempotent event processing,Implement and test the next core capability: Idempotent event processing.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-09,Pull request diff retrieval,Implement and test the next core capability: Pull request diff retrieval.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-10,Relevant code context collection,Implement and test the next core capability: Relevant code context collection.,High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-11,Repository rule configuration,Implement and test the next core capability: Repository rule configuration.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-12,Static analysis integration,Implement and test the next core capability: Static analysis integration.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-13,LLM review orchestration,Implement and test the next core capability: LLM review orchestration.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-14,Finding schema and severity,Implement and test the next core capability: Finding schema and severity.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-15,Finding deduplication,Implement and test the next core capability: Finding deduplication.,Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Finding precision, actionable rate, missed seeded defects, duplicate comments, review latency. Include per-case results and regression comparison.",High,github-code-review-ai,P09-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Finding precision, actionable rate, missed seeded defects, duplicate comments, review latency.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Prompt injection in code/comments, false positives, secret leakage, webhook replay, excessive permissions. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,github-code-review-ai,P09-EPIC,"1. Controls address Prompt injection in code/comments, false positives, secret leakage, webhook replay, excessive permissions.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P09,AI Pull Request Review and Quality Assistant,Story,P09-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P09,AI Pull Request Review and Quality Assistant,Story,P09-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,github-code-review-ai,P09-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-01,Initialize LLM Guard and Prompt Injection Defense Platform repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Application gateway → identity/context policy → input scanners → model/tool policy enforcement → output scanners/redaction → audit events and security analytics.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-03,Create core database schema and migration workflow,"Model and migrate the core entities: Application, Policy, ScanRequest, Finding, SensitiveEntity, ToolPermission, AuditEvent, TestCase, SecurityRun. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /v1/scan/input; POST /v1/scan/output; POST /v1/authorize-tool; CRUD /policies; POST /security-tests; GET /audit-events. Include validation, pagination where needed, request IDs, and consistent error responses.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-06,Application and API key registry,Implement and test the first core capability: Application and API key registry.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-07,Policy schema and versioning,Implement and test the next core capability: Policy schema and versioning.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-08,Prompt injection detection,Implement and test the next core capability: Prompt injection detection.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-09,Input normalization and scanning,Implement and test the next core capability: Input normalization and scanning.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-10,Sensitive data detection,Implement and test the next core capability: Sensitive data detection.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-11,Redaction and masking,Implement and test the next core capability: Redaction and masking.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-12,Output policy checks,Implement and test the next core capability: Output policy checks.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-13,Tool authorization engine,Implement and test the next core capability: Tool authorization engine.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-14,Least-privilege permission model,Implement and test the next core capability: Least-privilege permission model.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-15,Risk scoring and decision reasons,Implement and test the next core capability: Risk scoring and decision reasons.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Attack detection recall, false-positive rate, secret leakage rate, policy decision correctness, added latency. Include per-case results and regression comparison.",High,enterprise-prompt-security,P10-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Attack detection recall, false-positive rate, secret leakage rate, policy decision correctness, added latency.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: False negatives, bypass techniques, overblocking, sensitive logging, policy misconfiguration. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,enterprise-prompt-security,P10-EPIC,"1. Controls address False negatives, bypass techniques, overblocking, sensitive logging, policy misconfiguration.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+P10,LLM Guard and Prompt Injection Defense Platform,Story,P10-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P02-01,Initialize Autonomous Market Research Analyst repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Research request → planner → bounded search/retrieval tools → evidence store → synthesis agent → citation verifier → human review → report export. Persist graph state and tool traces.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-03,Create core database schema and migration workflow,"Model and migrate the core entities: ResearchJob, PlanStep, Source, Evidence, ToolCall, Finding, Report, ReviewDecision. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /research-jobs; GET /research-jobs/{id}; POST /research-jobs/{id}/approve; GET /reports/{id}; POST /tools/search. Include validation, pagination where needed, request IDs, and consistent error responses.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-06,Research workspace and job creation,Implement and test the first core capability: Research workspace and job creation.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-07,Goal decomposition and planning,Implement and test the next core capability: Goal decomposition and planning.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-08,Search provider abstraction,Implement and test the next core capability: Search provider abstraction.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-09,Safe web retrieval and content normalization,Implement and test the next core capability: Safe web retrieval and content normalization.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-10,Evidence ledger with source metadata,Implement and test the next core capability: Evidence ledger with source metadata.,High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P02-11,Duplicate source detection,Implement and test the next core capability: Duplicate source detection.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-12,Research graph orchestration,Implement and test the next core capability: Research graph orchestration.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-13,Tool-call budgets and loop limits,Implement and test the next core capability: Tool-call budgets and loop limits.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-14,Finding extraction and claim tracking,Implement and test the next core capability: Finding extraction and claim tracking.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-15,Citation verification,Implement and test the next core capability: Citation verification.,Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Source coverage, claim-to-source support, citation validity, task completion, tool efficiency, human review acceptance. Include per-case results and regression comparison.",High,autonomous-research-agent,P02-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Source coverage, claim-to-source support, citation validity, task completion, tool efficiency, human review acceptance.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P02-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Untrusted web content, fabricated citations, runaway tool loops, source duplication, excessive cost. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,autonomous-research-agent,P02-EPIC,"1. Controls address Untrusted web content, fabricated citations, runaway tool loops, source duplication, excessive cost.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P02-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P02-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,autonomous-research-agent,P02-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

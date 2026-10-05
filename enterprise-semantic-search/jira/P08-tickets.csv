@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P08-01,Initialize Context-Aware Enterprise Search Engine repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Connectors → normalization and ACL mapping → lexical/vector indexing → query understanding → hybrid retrieval → reranking → explainable results and optional answer synthesis.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-03,Create core database schema and migration workflow,"Model and migrate the core entities: Connector, SourceRecord, IndexDocument, ACL, SearchQuery, SearchResult, RankingConfig, Feedback. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /connectors; POST /index/rebuild; POST /search; GET /documents/{id}; POST /feedback; GET /search/metrics. Include validation, pagination where needed, request IDs, and consistent error responses.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-06,Connector framework,Implement and test the first core capability: Connector framework.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-07,Source normalization,Implement and test the next core capability: Source normalization.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-08,Incremental indexing,Implement and test the next core capability: Incremental indexing.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-09,ACL ingestion and enforcement,Implement and test the next core capability: ACL ingestion and enforcement.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-10,Keyword search,Implement and test the next core capability: Keyword search.,High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P08-11,Embedding generation,Implement and test the next core capability: Embedding generation.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-12,Hybrid retrieval,Implement and test the next core capability: Hybrid retrieval.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-13,Query rewriting,Implement and test the next core capability: Query rewriting.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-14,Reranking configuration,Implement and test the next core capability: Reranking configuration.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-15,Result explanations,Implement and test the next core capability: Result explanations.,Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: NDCG@k, Recall@k, MRR, zero-result rate, ACL leakage tests, query latency. Include per-case results and regression comparison.",High,enterprise-semantic-search,P08-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include NDCG@k, Recall@k, MRR, zero-result rate, ACL leakage tests, query latency.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P08-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Permission leakage, stale indexes, ranking drift, connector failures, query privacy. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,enterprise-semantic-search,P08-EPIC,"1. Controls address Permission leakage, stale indexes, ranking drift, connector failures, query privacy.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P08-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P08-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,enterprise-semantic-search,P08-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

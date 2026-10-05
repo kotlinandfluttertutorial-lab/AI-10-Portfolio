@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P04-01,Initialize Voice-Based Appointment and Task Assistant repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Audio capture → speech recognition → dialogue manager → intent/entity extraction → tool permission check → calendar/task adapter → spoken confirmation. Stream partial transcripts and handle interruption.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-03,Create core database schema and migration workflow,"Model and migrate the core entities: User, Session, Utterance, Intent, Task, Appointment, ToolAction, ConsentRecord. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /sessions; POST /sessions/{id}/audio; POST /sessions/{id}/turns; GET /tasks; POST /appointments; DELETE /sessions/{id}. Include validation, pagination where needed, request IDs, and consistent error responses.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-06,Voice session lifecycle,Implement and test the first core capability: Voice session lifecycle.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-07,Microphone permission and capture UI,Implement and test the next core capability: Microphone permission and capture UI.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-08,Speech recognition adapter,Implement and test the next core capability: Speech recognition adapter.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-09,Transcript normalization,Implement and test the next core capability: Transcript normalization.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-10,Intent and entity extraction,Implement and test the next core capability: Intent and entity extraction.,High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P04-11,Dialogue state management,Implement and test the next core capability: Dialogue state management.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-12,Task and calendar integrations,Implement and test the next core capability: Task and calendar integrations.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-13,Permission and confirmation gates,Implement and test the next core capability: Permission and confirmation gates.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-14,Text-to-speech response,Implement and test the next core capability: Text-to-speech response.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-15,Streaming and partial results,Implement and test the next core capability: Streaming and partial results.,Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Word error rate, intent accuracy, task completion, confirmation compliance, end-to-end latency, interruption recovery. Include per-case results and regression comparison.",High,voice-task-assistant,P04-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Word error rate, intent accuracy, task completion, confirmation compliance, end-to-end latency, interruption recovery.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P04-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Misrecognition, accidental booking/deletion, latency, sensitive audio retention, noisy environments. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,voice-task-assistant,P04-EPIC,"1. Controls address Misrecognition, accidental booking/deletion, latency, sensitive audio retention, noisy environments.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P04-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P04-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,voice-task-assistant,P04-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

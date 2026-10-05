@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P10-01,Initialize LLM Guard and Prompt Injection Defense Platform repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Application gateway → identity/context policy → input scanners → model/tool policy enforcement → output scanners/redaction → audit events and security analytics.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-03,Create core database schema and migration workflow,"Model and migrate the core entities: Application, Policy, ScanRequest, Finding, SensitiveEntity, ToolPermission, AuditEvent, TestCase, SecurityRun. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /v1/scan/input; POST /v1/scan/output; POST /v1/authorize-tool; CRUD /policies; POST /security-tests; GET /audit-events. Include validation, pagination where needed, request IDs, and consistent error responses.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-06,Application and API key registry,Implement and test the first core capability: Application and API key registry.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-07,Policy schema and versioning,Implement and test the next core capability: Policy schema and versioning.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-08,Prompt injection detection,Implement and test the next core capability: Prompt injection detection.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-09,Input normalization and scanning,Implement and test the next core capability: Input normalization and scanning.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-10,Sensitive data detection,Implement and test the next core capability: Sensitive data detection.,High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P10-11,Redaction and masking,Implement and test the next core capability: Redaction and masking.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-12,Output policy checks,Implement and test the next core capability: Output policy checks.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-13,Tool authorization engine,Implement and test the next core capability: Tool authorization engine.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-14,Least-privilege permission model,Implement and test the next core capability: Least-privilege permission model.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-15,Risk scoring and decision reasons,Implement and test the next core capability: Risk scoring and decision reasons.,Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Attack detection recall, false-positive rate, secret leakage rate, policy decision correctness, added latency. Include per-case results and regression comparison.",High,enterprise-prompt-security,P10-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Attack detection recall, false-positive rate, secret leakage rate, policy decision correctness, added latency.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P10-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: False negatives, bypass techniques, overblocking, sensitive logging, policy misconfiguration. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,enterprise-prompt-security,P10-EPIC,"1. Controls address False negatives, bypass techniques, overblocking, sensitive logging, policy misconfiguration.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P10-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P10-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,enterprise-prompt-security,P10-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

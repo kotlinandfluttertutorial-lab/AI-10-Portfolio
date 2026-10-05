@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P07-01,Initialize AI Software Project Delivery Orchestrator repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Project brief → requirements agent → planner → task/dependency graph → specialist agents → tool execution sandbox/adapters → reviewer and human approval → Jira synchronization.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-03,Create core database schema and migration workflow,"Model and migrate the core entities: Project, Requirement, Plan, Task, Dependency, AgentRun, Artifact, Approval, JiraLink. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /projects; POST /projects/{id}/plans; GET /plans/{id}; POST /tasks/{id}/run; POST /approvals/{id}; POST /integrations/jira/sync. Include validation, pagination where needed, request IDs, and consistent error responses.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-06,Project intake and brief parser,Implement and test the first core capability: Project intake and brief parser.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-07,Requirement extraction,Implement and test the next core capability: Requirement extraction.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-08,Work breakdown planner,Implement and test the next core capability: Work breakdown planner.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-09,Dependency graph validation,Implement and test the next core capability: Dependency graph validation.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-10,Specialist agent definitions,Implement and test the next core capability: Specialist agent definitions.,High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P07-11,Shared state and artifact store,Implement and test the next core capability: Shared state and artifact store.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-12,Task assignment and status model,Implement and test the next core capability: Task assignment and status model.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-13,Bounded agent execution,Implement and test the next core capability: Bounded agent execution.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-14,Tool permission scopes,Implement and test the next core capability: Tool permission scopes.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-15,Jira issue creation and sync,Implement and test the next core capability: Jira issue creation and sync.,Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Plan completeness, dependency validity, task success, duplicate rate, approval rejection rate, cost per workflow. Include per-case results and regression comparison.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Plan completeness, dependency validity, task success, duplicate rate, approval rejection rate, cost per workflow.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P07-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Agent coordination loops, unsafe repository changes, duplicate Jira issues, unclear ownership, unreviewed outputs. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Controls address Agent coordination loops, unsafe repository changes, duplicate Jira issues, unclear ownership, unreviewed outputs.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P07-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P07-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,multi-agent-delivery-orchestrator,P07-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

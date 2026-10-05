@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P01-01,Initialize Enterprise Knowledge Intelligence Platform repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Upload API → ingestion queue → parser/chunker → embedding service → pgvector index. Query API → hybrid retrieval → reranker → grounded LLM response with citations → evaluation and feedback pipeline.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-03,Create core database schema and migration workflow,"Model and migrate the core entities: Workspace, Document, DocumentVersion, Chunk, Embedding, Query, RetrievedPassage, Answer, Citation, EvaluationRun, Feedback. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /documents; GET /documents/{id}; POST /search; POST /answers; POST /evaluations; POST /feedback; GET /health. Include validation, pagination where needed, request IDs, and consistent error responses.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-06,Workspace and document lifecycle,Implement and test the first core capability: Workspace and document lifecycle.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-07,Secure document upload and validation,Implement and test the next core capability: Secure document upload and validation.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-08,PDF/DOCX/text parsing,Implement and test the next core capability: PDF/DOCX/text parsing.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-09,Configurable chunking strategies,Implement and test the next core capability: Configurable chunking strategies.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-10,Embedding generation and versioning,Implement and test the next core capability: Embedding generation and versioning.,High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P01-11,Vector index management,Implement and test the next core capability: Vector index management.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-12,Hybrid keyword and semantic retrieval,Implement and test the next core capability: Hybrid keyword and semantic retrieval.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-13,Metadata filtering and access control,Implement and test the next core capability: Metadata filtering and access control.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-14,Reranking pipeline,Implement and test the next core capability: Reranking pipeline.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-15,Grounded answer generation,Implement and test the next core capability: Grounded answer generation.,Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Recall@k, MRR, answer relevance, faithfulness, citation precision, latency, cost per query. Include per-case results and regression comparison.",High,rag-evaluation-platform,P01-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Recall@k, MRR, answer relevance, faithfulness, citation precision, latency, cost per query.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P01-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Poor chunking, stale indexes, hallucinated citations, tenant data leakage, embedding/model cost. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,rag-evaluation-platform,P01-EPIC,"1. Controls address Poor chunking, stale indexes, hallucinated citations, tenant data leakage, embedding/model cost.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P01-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P01-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,rag-evaluation-platform,P01-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3

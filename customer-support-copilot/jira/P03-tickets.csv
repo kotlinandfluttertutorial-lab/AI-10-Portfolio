@@ -1,0 +1,81 @@
+Issue Type,Issue Key,Summary,Description,Priority,Labels,Epic Link,Acceptance Criteria,Story Points
+Story,P03-01,Initialize Smart Customer Service Assistant repository and developer tooling,"Create the application skeleton, local run commands, environment template, linting, formatting, type checks, and test conventions.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-02,Document system architecture and key technical decisions,"Document the architecture, component responsibilities, data flow, failure modes, and decisions for: Conversation gateway → intent and sentiment signals → customer/ticket context → knowledge retrieval → response draft → policy checks → agent approval/send. Ticket events feed analytics.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-03,Create core database schema and migration workflow,"Model and migrate the core entities: Customer, Conversation, Message, Ticket, Intent, SuggestedReply, KnowledgeArticle, Escalation, Feedback. Include ownership boundaries, indexes, timestamps, and lifecycle constraints.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-04,Implement versioned API foundation and error contract,"Implement API conventions for: POST /conversations; POST /messages; GET /tickets/{id}; POST /tickets/{id}/classify; POST /replies/{id}/approve; GET /analytics. Include validation, pagination where needed, request IDs, and consistent error responses.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-05,"Implement authentication, authorization, and configuration security",Implement secure identity and role checks for protected operations. Keep secrets out of source control and logs; document local development auth.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-06,Agent workspace and inbox,Implement and test the first core capability: Agent workspace and inbox.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-07,Conversation and ticket data model,Implement and test the next core capability: Conversation and ticket data model.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-08,Message ingestion API,Implement and test the next core capability: Message ingestion API.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-09,Intent and priority classification,Implement and test the next core capability: Intent and priority classification.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-10,Customer context retrieval,Implement and test the next core capability: Customer context retrieval.,High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
+Story,P03-11,Knowledge-base ingestion,Implement and test the next core capability: Knowledge-base ingestion.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-12,Grounded response drafting,Implement and test the next core capability: Grounded response drafting.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-13,Policy and safety checks,Implement and test the next core capability: Policy and safety checks.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-14,Human approval workflow,Implement and test the next core capability: Human approval workflow.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-15,Escalation rules,Implement and test the next core capability: Escalation rules.,Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-16,Add project-specific evaluation and regression test harness,"Build a versioned evaluation set and report these measures: Resolution suggestion acceptance, classification F1, groundedness, escalation recall, response latency, agent satisfaction. Include per-case results and regression comparison.",High,customer-support-copilot,P03-EPIC,"1. Evaluation fixtures are versioned.
+2. Metrics include Resolution suggestion acceptance, classification F1, groundedness, escalation recall, response latency, agent satisfaction.
+3. Per-case failures are inspectable.
+4. A baseline can be compared with a new run.",3
+Story,P03-17,"Add observability, audit events, and operational dashboards","Add structured logs, request/workflow correlation, useful metrics, audit events, and a dashboard or documented queries.",Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-18,Implement security and privacy controls for project-specific risks,"Threat-model and mitigate: Incorrect advice, privacy exposure, over-automation, stale policies, biased sentiment classification. Add regression tests for authorization, untrusted input, sensitive data, and unsafe side effects.",High,customer-support-copilot,P03-EPIC,"1. Controls address Incorrect advice, privacy exposure, over-automation, stale policies, biased sentiment classification.
+2. Authorization and sensitive-data behavior are tested.
+3. Unsafe or uncertain actions fail closed or require review.
+4. Security decisions are documented.",3
+Story,P03-19,"Add CI/CD, containerization, and deployment documentation","Add CI checks, reproducible container builds, environment configuration, health checks, migration notes, and deployment/runbook documentation.",Medium,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",2
+Story,P03-20,Deliver integrated demo workflow and release acceptance report,"Connect the implemented modules into one repeatable demo journey. Run acceptance tests and document measured results, known limitations, and release decision.",High,customer-support-copilot,P03-EPIC,"1. Implementation is covered by automated tests.
+2. Invalid and failure paths are handled and documented.
+3. Relevant logs/metrics and user-facing status are present.
+4. Documentation and acceptance evidence are updated.",3
