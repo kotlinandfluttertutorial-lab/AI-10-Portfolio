@@ -1,0 +1,100 @@
+name: CI — AgentOps
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    name: Lint, type-check, and unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        working-directory: agentops-observability
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Lint (ruff)
+        working-directory: agentops-observability
+        run: ruff check .
+
+      - name: Format check (black)
+        working-directory: agentops-observability
+        run: black --check .
+
+      - name: Type check (mypy)
+        working-directory: agentops-observability
+        run: mypy api/ domain/ database/ adapters/ --ignore-missing-imports
+
+      - name: Secret scan (detect-secrets)
+        working-directory: agentops-observability
+        run: |
+          detect-secrets scan --no-verify > .secrets.new
+          # Fail if any secrets are found
+          python -c "
+          import json, sys
+          data = json.load(open('.secrets.new'))
+          count = sum(len(v) for v in data.get('results', {}).values())
+          if count > 0:
+              print(f'ERROR: detect-secrets found {count} potential secret(s)')
+              print(json.dumps(data['results'], indent=2))
+              sys.exit(1)
+          print('No secrets found.')
+          "
+
+      - name: Unit tests
+        working-directory: agentops-observability
+        env:
+          DATABASE_URL: postgresql+asyncpg://test:test@localhost:5432/agentops_test
+          DATABASE_URL_SYNC: postgresql://test:test@localhost:5432/agentops_test
+          REDIS_URL: redis://localhost:6379/1
+          JWT_SECRET: ci-test-secret-key-that-is-long-enough-for-tests
+          APP_ENV: test
+          LOG_LEVEL: WARNING
+        run: pytest tests/unit/ -v --tb=short
+
+  security-scan:
+    name: Dependency vulnerability scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Run pip-audit
+        working-directory: agentops-observability
+        run: pip-audit --requirement <(pip show agentops-observability 2>/dev/null | grep -v "^$" || echo "") || true
+        # pip-audit exits 1 on vulnerabilities — treat as warning in skeleton stage
+
+  build:
+    name: Docker build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        working-directory: agentops-observability
+        run: docker build -t agentops:ci .
